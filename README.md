@@ -10,5 +10,6 @@ ctx = log.WithFields(ctx,WithFields(parent,
                 "uid": os.Getuid(),
             },
        )
+// Log with the Entry from the ctx
 log.Entry(ctx).Info("Informational log")
 ```

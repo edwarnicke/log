@@ -15,14 +15,14 @@ jobs:
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v1
         with:
-          config_file: .yamllint.yml
+          config_file: .ci/yamllint.yml
           strict: true
   build:
     name: build and test
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
     steps:
       - name: Check out code
         uses: actions/checkout@v2
